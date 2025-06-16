@@ -31,8 +31,97 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="assets/css/style.css?v=">
+        <title>响应式水平导航栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        
+        /* 导航栏容器 */
+        .topnav {
+            overflow: hidden;
+            background: linear-gradient(90deg,#155b94, #159556); /* 从左到右的绿色到蓝色渐变 */
+            position: relative;
+        }
+        
+        /* 隐藏默认链接 */
+        .topnav #myLinks {
+            display: none;
+        }
+        
+        /* 导航链接样式 */
+        .topnav a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: block;
+        }
+        
+        /* 汉堡菜单图标 */
+        .topnav a.icon {
+            background: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        
+        /* 活动/当前链接 */
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        /* 鼠标悬停效果 */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        /* 桌面视图 - 水平导航 */
+        @media screen and (min-width: 768px) {
+            .topnav {
+                display: flex;
+                justify-content: flex-start;
+            }
+            
+            .topnav a.icon {
+                display: none;
+            }
+            
+            .topnav #myLinks {
+                display: flex;
+            }
+            
+            .topnav a {
+                float: left;
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
   </head>
   <body>
+        <div class="topnav">
+        
+        <!-- 导航链接 (默认隐藏) -->
+        <div id="myLinks">
+            <a href="https://wcygoretzka.github.io/">Home</a>
+            <a href="#contact">Dataset</a>
+            <a href="#about">Tasks</a>
+        </div>
+        <!-- 汉堡菜单按钮 -->
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            ☰
+        </a>
+    </div>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
