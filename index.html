@@ -45,10 +45,13 @@
         
         /* 导航栏容器 */
         .topnav {
-            overflow: hidden;
-            background: linear-gradient(90deg,#155b94, #159556); /* 从左到右的绿色到蓝色渐变 */
-            position: relative;
-        }
+        overflow: hidden;
+        background: linear-gradient(90deg, #4CAF50, #2196F3);
+        position: fixed; /* 固定定位 */
+        top: 0;
+        width: 100%;
+        z-index: 1000; /* 确保导航栏在最上层 */
+    }
         
         /* 隐藏默认链接 */
         .topnav #myLinks {
