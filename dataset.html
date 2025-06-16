@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSI-TGRA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        
+        /* 导航栏容器 */
+        .topnav {
+            overflow: hidden;
+            background: linear-gradient(90deg,#155b94, #159556); /* 从左到右的绿色到蓝色渐变 */
+            position: relative;
+        }
+        
+        /* 隐藏默认链接 */
+        .topnav #myLinks {
+            display: none;
+        }
+        
+        /* 导航链接样式 */
+        .topnav a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: block;
+        }
+        
+        /* 汉堡菜单图标 */
+        .topnav a.icon {
+            background: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        
+        /* 活动/当前链接 */
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        /* 鼠标悬停效果 */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        /* 桌面视图 - 水平导航 */
+        @media screen and (min-width: 768px) {
+            .topnav {
+                display: flex;
+                justify-content: flex-start;
+            }
+            
+            .topnav a.icon {
+                display: none;
+            }
+            
+            .topnav #myLinks {
+                display: flex;
+            }
+            
+            .topnav a {
+                float: left;
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 移动端优先的导航栏 -->
+    <div class="topnav">
+        
+        <!-- 导航链接 (默认隐藏) -->
+        <div id="myLinks">
+            <a href="https://wcygoretzka.github.io/">Home</a>
+            <a href="https://wcygoretzka.github.io/dataset.html">Dataset</a>
+            <a href="#about">Tasks</a>
+        </div>
+        <!-- 汉堡菜单按钮 -->
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            ☰
+        </a>
+    </div>
+    
+    <div style="padding:20px;">
+        <h2 style="text-align:left; margin-bottom:10px; margin-top:30px; " _msttexthash="41297594" _msthash="14">图片来源及使用许可证</h2>
+        <p style="text-align:justify;" _msttexthash="2336874046" _msthash="15">DOTA 图像收集自谷歌地球、中国资源卫星数据和应用中心提供的 GF-2 和 JL-1 卫星，以及 CycloMedia B.V. 提供的航拍图像。
+        DOTA 由 RGB 图像和灰度图像组成。RGB 图像来自 Google Earth 和 CycloMedia，而灰度图像来自 GF-2 和 JL-1 卫星图像的全色波段。
+        所有图像都以 'png' 格式存储。</p>
+    </div>
+    
+
+
+
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
